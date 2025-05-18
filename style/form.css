@@ -1,0 +1,42 @@
+form {
+box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+border-radius: 5px;
+
+  width: 21.87rem;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.8rem;
+  padding-block: 0.5rem;
+
+  input {
+    width: 15.62rem;
+    height: 2.8rem;
+
+    margin: auto;
+    text-align: center;
+
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+      rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+  }
+  #btn-cadastro {
+    width: 12.62rem;
+    height: 2.3rem;
+
+    margin: auto;
+
+    cursor: pointer;
+
+    background-color: #08914a;
+    color: #fff;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+     border: none;
+    border-radius: 10px;
+  }
+}
