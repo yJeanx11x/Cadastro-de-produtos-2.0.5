@@ -8,17 +8,18 @@ const alerta = document.querySelector(".msg-cadastro");
 
 // Impede que caracteres não numéricos sejam digitados nos campos de preço e quantidade
 precoProduto.addEventListener("keydown",(e)=>{
-    if(e.key.match(/^[0-9]+$/) == null){
-      e.preventDefault()
-    }
-  
+  if(!e.key.match(/^[0-9]$/) && e.key !== "Backspace"){
+    e.preventDefault()
+  }
 });
 
 quantidadeP.addEventListener('keydown',(e)=>{
-   if(e.key.match(/^[0-9]+$/) == null){
+   if(!e.key.match(/^[0-9]$/) && e.key !== "Backspace"){
       e.preventDefault()
     }
+  
 })
+
 
 
 
@@ -70,3 +71,8 @@ alerta.style.backgroundColor = "#08914ace";
   }
 });
 
+
+function moedaBRL(preco){
+const formatado= preco.toLocaleString('pt-br',{ style:'currency',currency:'BRL'})
+return formatado
+}
