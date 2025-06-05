@@ -1,9 +1,27 @@
+
 const nomeProduto = document.querySelector("#nome");
 const precoProduto = document.querySelector("#preco");
 const quantidadeP = document.querySelector("#quantidade");
 const btnCadastro = document.querySelector("#btn-cadastro");
 
 const alerta = document.querySelector(".msg-cadastro");
+
+// Impede que caracteres não numéricos sejam digitados nos campos de preço e quantidade
+precoProduto.addEventListener("keydown",(e)=>{
+    if(e.key.match(/^[0-9]+$/) == null){
+      e.preventDefault()
+    }
+  
+});
+
+quantidadeP.addEventListener('keydown',(e)=>{
+   if(e.key.match(/^[0-9]+$/) == null){
+      e.preventDefault()
+    }
+})
+
+
+
 
 btnCadastro.addEventListener("click", (e) => {
   //Não envia o formulario
@@ -51,3 +69,4 @@ alerta.style.backgroundColor = "#08914ace";
     alert("⚠️ Este produto já está cadastrado no sistema.");
   }
 });
+
