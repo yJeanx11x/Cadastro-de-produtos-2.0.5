@@ -20,6 +20,10 @@ quantidadeP.addEventListener('keydown',(e)=>{
   
 })
 
+precoProduto.addEventListener('input',(e)=>{
+const valorFormatado = moedaBRL(e.target.value)
+e.target.value = valorFormatado;
+})
 
 
 
@@ -72,7 +76,16 @@ alerta.style.backgroundColor = "#08914ace";
 });
 
 
-function moedaBRL(preco){
-const formatado= preco.toLocaleString('pt-br',{ style:'currency',currency:'BRL'})
-return formatado
+function moedaBRL(valor){
+// Remove tudo que não for número
+  const numero = valor.replace(/\D/g, '');
+  
+  // Converte para float com duas casas decimais
+  const float = parseFloat(numero) / 100;
+  
+  // Formata em moeda BRL
+  return float.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  });
 }
