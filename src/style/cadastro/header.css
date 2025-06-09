@@ -1,0 +1,27 @@
+header{
+   
+
+    height: 50px;
+    width: auto;
+    display: flex;
+    margin: auto;
+
+    span{
+a {
+    img{
+        width: 50px;
+        display: flex;
+        cursor: pointer;
+        transition: s ease-out;
+   
+    }
+     img:hover{
+            width: 52px;
+        transition: 0.5s ease-out;
+       
+        
+
+        }
+}
+    }
+}
