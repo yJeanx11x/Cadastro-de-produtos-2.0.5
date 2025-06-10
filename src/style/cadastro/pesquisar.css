@@ -1,0 +1,39 @@
+.pesquisar {
+    width: auto;
+    height: 800px;
+    padding-block: 1rem;
+    margin: auto;
+
+    .procurarProduto {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        gap: 1rem;
+
+        input {
+            width: 350px;
+            height: 45px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            text-align: center;
+            font-size: 16pt;
+            outline: none;
+        }
+      
+
+        img {
+            width: 30px;
+            cursor: pointer;
+     
+transition: 0.1s ease-out;
+    
+        }
+img:hover{
+opacity: 85%;
+transition: 0.3s ease-in;
+}
+
+    }
+}
+
